@@ -1,0 +1,431 @@
+/* CSS Document 
+This document uses the SMACSS Organizational Style Guide
+Jonathan Snook (2012-08-21T04:00:00+00:00). Scalable and Modular Architecture for CSS
+There are four sections for this - CSS file - Base, Layout, Module, State, Theme 
+Prefixes are as follows:
+Layout: prefixes are l-; layout- or grid-; table-
+State: prefixes are is-; for example is-hidden
+Module: .name (of module name) so for example if it is left-nav it would be .left-nav
+This is a test of subversion
+*/
+
+/* Base: A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes. It doesn't include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+for example: 
+a {     color: #039; }
+
+*/ 
+
+
+body {
+    background-color: #CFCFCF;
+    background-image: url("graphics/LPFlogoJos.jpg");
+    background-position: center center;
+    background-repeat: repeat;
+    font-family: "pragmatica-web", "Times New Roman", Times, serif;
+	font-size: small;
+}
+
+p {    
+	text-align: center;
+	padding: 4px;
+}
+
+a {
+	text-decoration:none;
+	border-bottom: none;
+}
+
+a:active, a:focus { 
+ outline: none; 
+ ie-dummy: expression(this.hideFocus=true);
+}
+
+
+img {
+	text-decoration:none;
+	border-style: none;
+}
+
+
+
+h2 {
+	font-family: "pragmatica-web", "Times New Roman", Times, serif;
+	text-align:center;
+}
+
+/* this removes the Typekit badge from the pages */
+.typekit-badge {display:none !important;}
+
+/* Layout: Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as header and footer are traditionally styled using ID selectors but take the time to think about the elements that are common across all components of the page and use class selectors where appropriate.
+For example:
+#article {     float: left; }
+and
+.l-flipped #article {     float: right; }
+*/
+
+/*===================================================================*/
+/*  				LINKS LAYOUT                                     */
+/*===================================================================*/
+#links {
+	display: inline-block;
+    float: left;
+    margin-right: 20px;
+	margin-top:20px;
+    width: 110px;
+}
+#links ul li {
+	list-style-type:none;
+	list-style-position:inside;
+	margin-top: 12px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding:0;
+	float: none;
+	letter-spacing: 1.5px;
+	color: black;
+	text-align:right;
+}
+
+#links a {
+	text-decoration:none;
+	font-size: 14px;
+	border-bottom: none;
+	color: black;
+}
+
+#links a:hover {
+	text-decoration:none;
+	font-size:14px;
+	border-bottom:dotted 2px #999;
+	color: black;
+}
+
+
+#links a:hover {
+	text-decoration:none;
+	border-bottom:dotted 2px #999;
+	
+}
+
+/*===================================================================*/
+/*  				SIDEBAR LAYOUT                                   */
+/*===================================================================*/
+.sidebar-area {
+    position:relative;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding-left: 5px ;*/
+	padding-top: 50px ;
+	padding-bottom: 5px ;
+	padding-right: 5px ;
+	display: inline-block;
+    width: 190px;
+	float: right;
+	margin-top: 20px;
+	margin-right: 35px;
+}
+
+.sidebar-area td {
+	position:relative;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC;
+	padding-top:6px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	vertical-align: middle;	
+}
+.post-by-month {
+	position:relative;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding-left: 5px ;*/
+	padding-top: 20px ;
+	padding-bottom: 5px ;
+	padding-right: 5px ;
+	display: inline-block;
+    width: 190px;
+	margin-top: 10px;
+	margin-right: 35px;
+}
+
+.post-by-month .heading {
+	text-align:center;
+	color: #999;
+	font-size:100%;
+}
+
+.content li, a {
+	text-align:left;
+	color: #999;
+	list-style-type: disc;
+}
+
+#blog-container .sidebar-area .post-by-month .post-instructions {
+	/*font-size: x-small;*/
+	color: #999;
+	text-align: center;
+}
+
+
+/*=============================================================================================*/
+/*==                                  BLOG PAGE                                              ==*/
+/*=============================================================================================*/
+#blog-container {
+	margin: 50px auto 20px;
+	padding-left: 15px;
+	width: 1095px;
+	height:100%;
+	border:thin;
+	border-color:grey;
+	border-style:solid;
+	/* [disabled]margin-left: auto; */
+	margin-right: auto;
+	background-color: white;
+}
+	
+#blog-container-header {
+	height: 75px;
+	top: 10px;
+	margin-left: 735px;
+	width: 100%;
+}
+
+#blog-container .blog-content-home .entry a strong {
+	color: #009;
+}
+
+#blog-container .blog-content-home .blog-title a {
+	font-size: small;
+/*	font-style: italic; */
+}
+/* Module: a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names.
+
+<div class="fld"> 
+    <span>Folder Name</span> 
+</div> 
+
+--* The Folder Module css--
+.fld > span {     
+	padding-left: 20px;
+	background: url(icon.png); }
+
+ */
+
+/*=============================================================================================*/
+/*==                                  BLOG POSTS MODULE                                      ==*/
+/*=============================================================================================*/
+.blog-content-home {
+    height: 100%; 
+	position:relative;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding: 5px ;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	margin-left: 20px;
+	display: inline-block;
+    width: 700px;
+}
+
+
+#post{
+/*	display: inline-block;*/
+    float: right;
+    width: 633px;
+	border:thin;
+	border-color:orange;
+	border-style:solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+.entry {
+	position:relative;
+	width: 100%;
+	color: gray;  
+	font-size: 100%;
+	text-align:justify;
+	padding: 4px;
+	margin-left: 25px;
+	margin-right: 25px;
+	width: 640px;
+}
+
+.entry p {
+	text-align: justify;
+}
+
+.entry img{
+	text-align: center;
+	
+}
+.blog-post-tags {
+	position:relative;
+	width: 100%;
+	color: black;  
+	font-size: 0.8em;
+	text-align: left;
+	vertical-align: top;
+	
+}
+
+
+.blog-title {
+/*	height: 75px;
+	top: 16px;*/
+	position:relative;
+	width: 100%;
+	color: black;  
+	font-size: 24px;
+	font-weight:bold;
+	text-align: left;
+/*	padding-left: 4px;*/
+	
+}
+
+.blog-post-date {
+	/*font: bold 95%/1.4em 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif;*/
+    /*font-family: "garamond-premier-pro-display", "Times New Roman", Times, serif;*/
+    text-align: left;
+	color: grey;
+	/*padding-left: 4px;*/
+	padding: 4px;
+	margin-left: 25px;
+	margin-right: 25px;
+	text-transform:lowercase;
+	line-height: 1.2em;
+	
+}
+
+.blog-seperator {
+	text-align: center;
+	padding: 10px;
+}
+
+
+.blog-post-title {
+	/*font-family: "proxima-nova-sc-osf-condensed", "Times New Roman", Times, serif;*/
+	color: black;
+	font-size: 1.6em;
+	/* font-weight: bold; */
+	line-height: 1.2em;
+	margin-left: 25px;
+	margin-right: 25px;
+	text-align:left;
+	padding-left: 4px;
+	text-transform:lowercase;
+}
+
+.blog-post-title a {
+	color: black;
+	text-decoration:none;
+}
+
+
+.excerpt-pic {
+	text-align: center;
+}
+
+.post-featured-img {
+ 	text-align:center;
+}
+.single-content-home {
+    height: 100%; 
+	position:relative;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding: 5px ;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	margin-left: 20px;
+	display: inline-block;
+    width: 725px;
+}
+
+.single_entry {
+	position:relative;
+	width: 100%;
+	color: black;  
+	font-size: 100%;
+	text-align:justify;
+	padding: 4px;
+	margin-left: 10px;
+	width: 700px;
+}
+
+.single_entry p {
+	text-align: justify;
+}
+
+.single_entry img{
+	text-align: center;
+	
+}
+
+.single_blog_post_date { 
+	/*font-family: "garamond-premier-pro-display", "Times New Roman", Times, serif; */
+    color: gray;
+	padding-left: 4px;
+	margin-left: 25px;
+}
+
+.single_blog_post_title {
+	/*font-family: Georgia, "proxima-nova-sc-osf-condensed", "Times New Roman", Times, serif;*/
+	text-transform:lowercase;
+	color: grey;
+    font-size: 2.4em;
+    font-weight: strong;
+   /* margin-top: 10px;*/
+    margin-left: 25px;
+	width:640px;
+	padding-left: 4px;
+}
+
+.single_subheading {
+	color: #6B55AA;
+	text-align:center;
+	padding-left: 4px;
+}
+	
+/*=============================================================================================*/
+/*==                                  ARCHIVE MODULE                                         ==*/
+/*=============================================================================================*/
+.archives {
+   font-family: "proxima-nova-sc-osf-condensed", "Times New Roman", Times, serif;
+	text-transform:lowercase;
+	color: #6B55AA;
+    font-size: 1.2em;
+    font-weight: normal;
+    line-height: .8em;
+    margin-top: 10px;
+    text-align:left;
+	padding-left: 4px;
+}
+
+.archives h2{
+   font-family: "proxima-nova-sc-osf-condensed", "Times New Roman", Times, serif;
+	text-transform:lowercase;
+	color: #6B55AA;
+    font-size: 1.2em;
+    font-weight: normal;
+    line-height: .8em;
+    margin-top: 10px;
+    text-align:left;
+	padding-left: 4px;
+}
+
+ol.posts{
+	font-family: "pragmatica-web", "Times New Roman", Times, serif;
+	list-style-type:none;
+	}

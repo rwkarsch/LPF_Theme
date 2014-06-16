@@ -1,0 +1,1317 @@
+/*
+Theme Name: WP Theme LPF
+Theme URI: http://wordpress.org/
+Description: This is the basic La Petite Fleur Theme
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style
+*/
+* {
+	font-family: 'helvetica neue',helvetica,arial;
+	/*@font-face { font-family: 'helvetica neue'; src: local('Arial');*/ 
+	/*font-family: Georgia, verdana, "trebuchet MS", helvetica, sans-serif;*/
+	font-size: 10px;
+	color: #999; 
+	letter-spacing: .65px;
+	margin: 0;
+	padding: 0;
+}
+body {
+  	background-color:#CFCFCF;
+	background-image:url(graphics/LPFlogoJos.jpg);
+	background-repeat:repeat;
+	background-position:center;
+/* text-align: center;  <--- Original -> changed as of 5/6/2011 */	
+		text-align:left;
+		font-size:6px !important;
+	color: red;
+}
+
+a {
+	text-decoration:none;
+	font-size: 14px;
+	border-bottom: none;
+}
+
+img {
+	text-decoration:none;
+	border-style: none;
+}
+
+/* as recommended by the cufon guide */
+em, i {
+	font-style: italic;
+}
+
+#container {
+	height: 540px;
+	margin-top: 50px;
+	position: relative;
+	width: 800px;
+	z-index: 1;
+	background-color: white;
+	border:thin;
+	border-color:#999;
+	border-style:solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#container-contact {
+	height: 560px;
+	margin-top: 50px;
+	position: relative;
+	width: 800px;
+	z-index: 1;
+	background-color: white;
+	border:thin;
+	border-color:#999;
+	border-style:solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+#container-port {
+	height: 670px;
+	margin-top: 50px;
+	position: relative;
+	width: 800px;
+	z-index: 1;
+	background-color: white;
+	border:thin;
+	border-color:#999;
+	border-style:solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#container-header {
+	height: 75px;
+	top: 10px;
+/* left: 210px;  <--- Original -> changed as of 5/6/2011 */		
+	left: 440px;
+	position:absolute;
+	width: 100%;
+}
+
+#links {
+	left: 24px;
+	position: absolute;
+	top: 120px;
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	text-align:right;
+	font-size: 14px;
+	color: black;
+}
+
+#links ul li {
+	list-style-type:none;
+	list-style-position:inside;
+	margin-top: 12px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding:0;
+	float: none;
+	letter-spacing: 1.5px;
+	color: black;
+	text-align:right;
+}
+
+#links a {
+	text-decoration:none;
+	font-size: 14px;
+	border-bottom: none;
+	color: black;
+}
+
+#links a:hover {
+	text-decoration:none;
+	font-size:14px;
+	border-bottom:dotted 2px #999;
+	color: black;
+}
+
+#content {
+	height: 405px;
+	left: 125px;
+	position:absolute;
+	top: 100px;
+	width:610px;
+	z-index:2;
+	padding: 5px 0px 0px 0px; 
+	margin:0;
+}
+
+#estimate-content {
+	height: 405px;
+	left: 20px;
+	position:absolute;
+	top: 100px;
+	width:610px;
+	z-index:2;
+	padding: 5px 0px 0px 0px; 
+	margin:0;
+}
+
+#content-home {
+	height: 400px;
+	left: 125px;
+	position:absolute;
+	top: 100px;
+	width:620px;
+	z-index:2;
+	margin:0;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding-left: 5px ;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	padding-right: 5px ;
+}
+
+#content-home #meteor-slideshow {
+	top: -23px;
+}
+
+#content-home #meteor-slideshowHomePage {
+	top: -23px;
+}
+
+#content-port {
+	height: 405px;
+	left: 125px;
+	position:absolute;
+	top: 100px;
+	width:610px;
+	z-index:2;
+	padding: 5px 0px 0px 0px; 
+	margin:0;
+}
+
+#content-contact {
+	height: 420px;
+	left: 130px;
+	position:absolute;
+	top: 100px;
+	width:610px;
+	z-index:2;
+	padding: 5px; 
+	margin: 2px;
+	font-size: 12px;
+	color: black;
+	text-align:center;
+	border:thin;
+	border-style: solid;
+	border-color: #999;
+}
+
+#content-contact tr p  {
+	font-size: 12px;
+	color: black;
+}
+
+#content-contact td {
+	font-size: 12px;
+	color: black;
+}
+#content-border: {
+	border:thin;
+	border-top:dotted 2px #999;	
+	border-bottom:dotted 2px #999;
+}
+
+.current_page_item {
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;
+	border-bottom:dotted 2px #999; */
+	font-weight:bolder;
+	color:#F00;
+/*	text-decoration:underline;*/
+}
+/* This starts the grid template section */
+#grid-top-left {
+	height: 200px;
+	left: 0px;
+	position:absolute;
+	top: 20px;
+	width:305px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; 
+	padding: 5px 0px 0px 0px;*/
+	text-align:left;
+	margin:0;
+}
+
+#grid-top-left strong{
+	font-size: 13px;
+	color: black;
+}
+
+
+#grid-top-left p, em {
+	font-size: 10px;
+	color: black;
+}
+
+#grid-top-left a {
+	font-size: 12px;
+	color: black;
+}
+
+
+#grid-top-right {
+	height: 200px;
+	left: 305px;
+	position:absolute;
+	text-align:left;
+	top: 20px;
+	width:305px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;
+	padding: 5px 0px 0px 0px;*/
+	margin:0;
+}
+
+#grid-top-right strong{
+	font-size: 13px;
+	color: black;
+}
+
+#grid-top-right p, em{
+	font-size: 10px;
+	color: black;
+}
+
+#grid-top-right a{
+	font-size: 12px;
+	color: black;
+}
+
+#grid-bottom-left {
+	height: 200px;
+	left: 0px;
+	position:absolute;
+	top: 225px;
+	width:305px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; 
+	padding: 5px 0px 0px 0px;*/
+	margin:0;
+}
+
+#grid-bottom-left strong{
+	font-size: 13px;
+	color: black;
+}
+#grid-bottom-left p, em{
+	font-size: 10px;
+	color: black;
+}
+
+#grid-bottom-left a{
+	font-size: 12px;
+	color: black;
+}
+
+
+#grid-bottom-right {
+	height: 200px;
+	left: 305px;
+	position:absolute;
+	top: 225px;
+	width:305px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;
+	padding: 5px 0px 0px 0px;*/
+	margin:0;
+}
+
+#grid-bottom-right strong{
+	font-size: 13px;
+	color: black;
+}
+
+#grid-bottom-right p, em{
+	font-size: 10px;
+	color: black;
+}
+
+#grid-bottom-right a{
+	font-size: 12px;
+	color: black;
+}
+
+
+
+#grid-pic {
+	height: 143px;
+	left: 8px;
+	position:absolute;
+	top: 10px;
+	width:114px;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding-left: 0px ;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	padding-right: 5px ;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin:0;
+	float: left;
+}
+
+#grid-pic2 {
+	height: 143px;
+	left: 8px;
+	position:absolute;
+	top: 10px;
+	width:114px;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding-left: 5px ;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	padding-right: 0px ;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin:0;
+	float: left;
+}
+
+
+#grid-content {
+	height: 190px;
+	left: 140px;
+	position:absolute;
+	top: 10px;
+	width:160px;
+	z-index:2;
+	margin:0;
+	font-size: 10px;
+	color: black;
+}
+#grid-content p em a {
+	color: black;
+	font-size: 10px;
+}
+
+
+#grid-content strong{
+	font-size: 13px;
+	color: black;
+}
+
+/* This ends the grid template section */
+
+#photo-left {
+	height: 410px;
+	left: 125px;
+	position:absolute;
+	top: 100px;
+	width:330px;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC;
+	padding: 3px 3px 3px 3px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin:0;
+}
+
+#loadarea {
+ /*   height: 410px;*/
+	height: 425px;
+	left: 125px;
+	position:absolute;
+ /*	top: 100px; */
+	top: 95px;
+	width:330px;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #999;
+	padding: 3px 3px 3px 3px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin:0;
+	font-size:9px !important;
+	color: #666 !important;
+	font-family: 'helvetica neue',helvetica,arial !important;
+    letter-spacing: 0.65px !important;
+}
+
+#loadareapaper {
+    height: 410px;
+	left: 125px;
+	position:absolute;
+ 	top: 95px;
+	width:330px;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #999;
+	padding: 3px 3px 3px 3px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin:0;
+	font-size:9px !important;
+	color: #666 !important;
+	font-family: 'helvetica neue',helvetica,arial !important;
+    letter-spacing: 0.65px !important;
+}
+
+img [title]{
+	color: red;
+}
+
+#content-right {
+	height: 405px;
+	left: 490px;
+	position:absolute;
+	top: 120px;
+	width:280px;
+	z-index:2;
+	border:thin;
+	line-height: 1.2em;
+/*	border-style: solid;
+	border-color: #999; */ 
+	padding: 5px 0px 0px 0px;
+	margin:0;
+	text-align:left;
+	font-size:13px;
+	color: black; 
+}
+#content-right p{
+	font-size:13px;
+	color: black;
+}
+
+#content-right em{
+	font-size:13px;
+	color: black; 
+}
+
+#content-right strong{
+	font-size:13px;
+	color: black; 
+}
+
+#content-right li {
+	list-style-type:none;
+	list-style-position:inside;
+	margin: 0 0 0 0;
+	font-size: 12px;
+}
+
+#content-right a {
+	text-decoration:none;
+	font-size:13px;
+	color: black;
+	border-bottom: none;
+}
+
+/*========================================================================================*/
+/* Boutique Page
+/*========================================================================================*/
+#content-right-boutique {
+	height: 405px;
+	left: 490px;
+	position:absolute;
+	top: 100px;
+	width:280px;
+	z-index:2;
+	border:thin;
+	line-height: 1.2em;
+/*	border-style: solid;
+	border-color: #999; */ 
+	padding: 5px 0px 0px 0px;
+	margin:0;
+	text-align:left;
+	font-size:13px;
+	color: black; 
+}
+#content-right-boutique p{
+	font-size:13px;
+	color: black;
+}
+
+#content-right-boutique em{
+	font-size:13px;
+	color: black; 
+}
+
+#content-right-boutique strong{
+	font-size:13px;
+	color: black; 
+}
+
+#content-right-boutique li {
+	list-style-type:none;
+	list-style-position:inside;
+	margin: 0 0 0 0;
+	font-size: 12px;
+}
+
+#content-right-boutique a {
+	text-decoration:none;
+	font-size:13px;
+	color: black;
+	border-bottom: none;
+}
+
+
+p.small-one {
+	font-size: 12px;
+}
+
+#content-right ul {
+	left: 510px;
+/*	font-size: 12px; */
+}
+
+#content-right-top {
+	height: 405px;
+	left: 490px;
+	position:absolute;
+	top: 120px;
+	width:280px;
+	z-index:2;
+	border:thin;
+	line-height: 1.2em;
+/*	border-style: solid;
+	border-color: #999; */ 
+	padding: 5px 0px 0px 0px;
+	margin:0;
+	text-align:left;
+	font-size:13px; 
+	color: black;
+}
+
+#content-right-top p {
+	font-size:13px; 
+	color: black;
+}
+
+#content-right-top em {
+	font-size:13px;
+	color: black; 
+}
+
+#content-right-top strong {
+	font-size:14px;
+	color: black; 
+}
+
+
+
+
+#content-right-top li {
+	list-style-type: circle;
+	list-style-position:inside;
+	margin-left: 8px;
+	font-size:12px;
+	color: black; 
+}
+
+#content-right-bottom {
+	height: 105px;
+	left: 480px;
+	position:absolute;
+	top: 455px;
+	width:385px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;  */
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	text-align:left;
+	vertical-align:bottom;
+/*	font-size:16px;*/
+}
+
+#content-right-bottom table {
+	border-collapse:collapse;
+	border:none;
+}
+#content-right-bottom tr {
+	border: 0px;
+}
+
+#content-right-bottom a {
+	font-size:12px;
+	color: #666; 
+	text-align:center;
+}
+
+#vignette-right-top {
+	height: 305px;
+	left: 480px;
+	position:absolute;
+	top: 120px;
+	width:280px;
+	z-index:2;
+	line-height:1.2em;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */ 
+	padding: 5px 0px 0px 0px;
+	margin:0;
+	text-align:center;
+}	
+#vignette-title strong{
+	font-size: 14px;
+	color: black;
+	line-height: 125%;
+		
+}
+
+#vignette-location {
+	font-size: 12px;
+	color: black;
+	line-height: 125%;
+		
+}
+
+#vignette-description {
+	/*line-height:1.2em;*/
+	text-align:center;
+	font-size: 12px;
+		color: black;
+	line-height: 125%;	
+}
+
+#vignette-description p {
+	/*line-height:1.2em;*/
+	text-align:center;
+	font-size: 12px;
+		color: black;
+		line-height: 125%;
+}
+
+#vignette-description a {
+	color: blue;
+	text-decoration: none;
+}
+
+#vignette-description li {
+	list-style-type: none;
+	list-style-position:inside;
+}
+	
+#vignette-right-bottom {
+	height: 105px;
+	left: 480px;
+	position:absolute;
+	top: 455px;
+	width:385px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;  */
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	text-align:left;
+	vertical-align:bottom;
+	color: black;
+}
+
+#vignette-right-bottom table {
+	border-collapse:collapse;
+	border:none;
+}
+#vignette-right-bottom tr {
+	border: 0px;
+}
+
+#vignette-right-bottom td, center, a {
+	color:#666;
+	font-size:12px;
+}
+
+
+#vignette-photo-credit {
+	left: 125px;
+	position:absolute;
+	top: 520px;
+	font-size:8px !important;
+}
+
+#friends-favorite {
+    left: 10px;
+	position:absolute;
+	top: 420px;
+	font-size:8px !important;
+	color: black;
+}
+
+#friends-favorite p{
+	
+	font-size:10px !important;
+	color: black;
+}
+
+/* This is the portfolio template section */
+#port-top-left {
+	height: 200px;
+	left: 0px;
+	position:absolute;
+	top: 0px;
+	width:203px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 5px 0px 0px 0px;
+	text-align:left;
+	margin:0;
+}
+
+#port-top-mid {
+	height: 200px;
+	left: 203px;
+	position:absolute;
+	top: 0px;
+	width:203px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 5px 0px 0px 0px;
+	text-align:left;
+	margin:0;
+}
+
+
+#port-top-right {
+	height: 200px;
+	left: 406px;
+	position:absolute;
+	text-align:left;
+	top: 0px;
+	width:203px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 5px 0px 0px 0px;
+	margin:0;
+}
+
+#port-bottom-left {
+	height: 200px;
+	left: 0px;
+	position:absolute;
+	top: 185px;
+	width:203px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 5px 0px 0px 0px;
+	margin:0;
+}
+
+#port-bottom-mid {
+	height: 200px;
+	left: 203px;
+	position:absolute;
+	top: 185px;
+	width:203px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 5px 0px 0px 0px;
+	margin:0;
+}
+
+#port-bottom-right {
+	height: 200px;
+	left: 406px;
+	position:absolute;
+	top: 185px;
+	width:203px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;*/
+	padding: 5px 0px 0px 0px;
+	margin:0;
+}
+
+#port-extra1-left{
+	height: 200px;
+	left: 0px;
+	position:absolute;
+	top: 370px;
+	width:203px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 5px 0px 0px 0px;
+	margin:0;
+}
+
+#port-extra1-mid {
+	height: 200px;
+	left: 203px;
+	position:absolute;
+	top: 370px;
+	width:203px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;  */
+	padding: 5px 0px 0px 0px;
+	margin:0;
+}
+
+#port-extra1-right {
+	height: 200px;
+	left: 406px;
+	position:absolute;
+	top: 370px;
+	width:203px;
+	text-align:left;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;*/
+	padding: 5px 0px 0px 0px;
+	margin:0;
+}
+
+#port-pic {
+	height: 140px;
+	left: 10px;
+	position:absolute;
+	top: 10px;
+	width:180px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 0px 0px 0px 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin:0;
+}
+
+#port-content {
+	height: 45px;
+	left: 10px;
+	position:absolute;
+	top: 155px;
+	width:180px;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999; */
+	padding: 0px 0px 0px 0px;
+	z-index:2;
+	margin:0;
+	text-align:center;
+	font-size: 13px;
+	color: black;
+}
+#port-content p{
+	font-size:13px; 
+	color: black;
+}
+
+/* End the portfolio template section */ 	
+
+#footer-graphics {
+	clear:both;
+	top:600px;
+	left:320px;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;*/
+	position: absolute;
+	font-variant: small-caps;
+	color: black;  
+	font-size: 11px;
+}
+
+
+#footer-graphics a{
+	font-variant: small-caps;
+	color: black;  
+	font-size: 11px;
+}
+
+#facebook-area {
+	clear:both;
+	top:514px;
+	left:650px;
+	vertical-align:text-top;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;*/
+	position: absolute;
+	font-variant: small-caps;
+	color: black;  
+	font-size: 11px;
+}
+
+#facebook-area a{
+	font-variant: small-caps;
+	color: black;  
+	font-size: 11px;
+}
+
+#phone-area {
+	clear:both;
+	top:518px;
+	left:555px;
+	position: absolute;
+	color: black;  
+	font-size: 11px;
+}
+
+.lpf_table {
+	text-align: right;
+	color: black;
+}
+
+.lpf_table2 {
+	text-align: left;
+	color: black;
+}
+
+
+.lpf_right_side {
+	text-align: left;
+	font-size:12px;
+	color: black;
+}
+
+.lpf_right_side label{
+	text-align: left;
+	font-size:12px;
+	color: black;
+}
+
+.formbutton{
+	text-align: left;
+	font-size:12px;
+	color: black;
+}
+
+
+
+
+/*========================================================================*/
+/* This is for the FRIENDS page - its late, I'm tired and this may suck   */
+/*========================================================================*/
+#friends-container {
+	height: 740px;
+	margin-top: 50px;
+	position: relative;
+	width: 800px;
+	z-index: 1;
+	background-color: white;
+	border:thin;
+	border-color:#999;
+	border-style:solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#friends-content {
+	height: 605px;
+	left: 125px;
+	position:absolute;
+	top: 100px;
+	width:610px;
+	z-index:2;
+	padding: 5px 0px 0px 0px; 
+	margin:0;
+}
+
+#friends-right {
+	height: 605px;
+	left: 320px;
+	position:absolute;
+	top: 5px;
+	width:320px;
+	z-index:2;
+	border-left:thin;
+	line-height: 1.2em;
+ 	border-left-style: solid;
+	border-left-color: #999;  
+	padding: 5px 0px 0px 0px;
+	margin:0;
+	text-align:left;
+/*	font-size:16px; */
+}
+#friends-right li {
+	list-style-type:none;
+	list-style-position:inside;
+	margin: 0 0 0 0;
+	font-size: 12px;
+}
+
+#friends-right a {
+	text-decoration:none;
+	font-size: 12px; 
+	border-bottom: none;
+	color:black;
+}
+
+#friends-right strong {
+	font-size: 13px;
+	color: black;
+}
+
+/*==========================================================================*/
+/* This is for the AS-SEEN-ON (AS-SEEN-IN) Page                             */
+/*==========================================================================*/
+#loadarea-aso {
+ /*   height: 410px;*/
+	height: 375px;
+	left: 125px;
+	position:absolute;
+ /*	top: 100px; */
+	top: 105px;
+	width:618px;
+	z-index:2;
+	border:thin;
+	border-style: solid;
+	border-color: #CCCCCC;
+	padding: 3px 3px 3px 3px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin:0;
+	font-size:6px !important;
+} 
+
+#content-right-bottom-aso {
+	height: 105px;
+	left: 125px;
+	position:absolute;
+	top: 495px;
+	width:618px;
+	z-index:2;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;  */
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	text-align:center;
+	vertical-align:bottom;
+/*	font-size:16px;*/
+}
+
+/*==========================================================================*/
+/* This is for the Client Page                                              */
+/*==========================================================================*/
+#content-client {
+	height: 405px;
+	left: 125px;
+	position:absolute;
+	top: 100px;
+	width:610px;
+	z-index:2;
+	padding: 5px 0px 0px 0px; 
+	margin:0;
+}
+
+#content-client-name strong{
+	font-size: 14px;
+	color: black;
+}
+
+#client-date strong{
+	font-size: 14px;
+	color: black;
+	text-align:left;
+}
+
+#client-description {
+	font-size: 12px;
+	color: black;
+	text-align:left;
+	margin-left: 1em;
+}
+
+
+#client-description p, ul, li{
+	font-size: 12px;
+	color: black;
+	text-align:left;
+	margin-left: 1em;
+}
+
+#client-description a, strong{
+	font-size: 12px;
+	color: blue;
+	text-align:left;
+	text-decoration:none;
+/*	margin-left: 1em;*/
+}
+
+#client-description a:hover {
+	text-decoration:none;
+	font-size:12px;
+	border-bottom:dotted 2px blue;
+}
+
+#client-pages {
+	clear:both;
+/*	top:400px;*/
+	left:500px;
+/*	border:thin;
+	border-style: solid;
+	border-color: #999;*/
+	position: absolute;
+	font-variant: small-caps;
+	color: black;  
+	font-size: 11px;
+}
+#client-pages a{
+	font-variant: small-caps;
+	color: black;  
+	font-size: 11px;
+}
+
+.pager {
+	color: black;  
+	font-size: 11px;
+}
+
+/*=============================================================================================*/
+/*==                                  BLOG PAGE                                              ==*/
+/*=============================================================================================*/
+#blog-container {
+	height: 1200px;
+	margin-top: 50px;
+	position: relative;
+	width: 1000px;
+	z-index: 1;
+	background-color: white;
+	border:thin;
+	border-color:#999;
+	border-style:solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+#blog-container-header {
+	height: 75px;
+	top: 10px;
+/* left: 210px;  <--- Original -> changed as of 5/6/2011 */		
+	left: 640px;
+	position:absolute;
+	width: 100%;
+}
+#blog-content-home {
+	height: 1200px;
+	left: 125px;
+	position:absolute;
+	top: 100px;
+	width:800px;
+	z-index:2;
+	margin:0;
+	border:thin;
+	border-style: solid;
+	border-color: #CCC; 
+	padding-left: 5px ;
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	padding-right: 5px ;
+}
+#blog-title {
+	height: 75px;
+	top: 16px;
+/* left: 210px;  <--- Original -> changed as of 5/6/2011 */		
+	left: 320px;
+	position:relative;
+	width: 100%;
+	color: black;  
+	font-size: 24px;
+	font-weight:bold;
+}
+#blog-post-title {
+	text-align:center;
+	position:relative;
+	width: 100%;
+	color: purple;  
+	font-size: 18px;
+	font-weight:900;
+	
+}/*=============================================================================================*/
+/*==                                PRODUCT PAGE                                             ==*/
+/*=============================================================================================*/
+#product-container {
+	height: 600px;
+	margin-top: 50px;
+	position: relative;
+	width: 830px;
+	z-index: 1;
+	background-color: white;
+	border:thin;
+	border-color:#999;
+	border-style:solid;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#product-container-header {
+	height: 75px;
+	top: 10px;
+/* left: 210px;  <--- Original -> changed as of 5/6/2011 */		
+	left: 480px;
+	position:absolute;
+	width: 100%;
+}
+
+#product-content-right-top {
+	height: 405px;
+	left: 480px;
+	position:absolute;
+	top: 100px;
+	width:330px;
+	z-index:2;
+	border:thin;
+	line-height: 1.2em;
+/*	border-style: solid;
+	border-color: #999; */ 
+	padding: 5px 0px 0px 0px;
+	margin:0;
+	text-align:left;
+	font-size:13px; 
+	color: black;
+}
+
+#product-content-right-top *{
+	 
+	color: black;
+}
