@@ -404,7 +404,7 @@ em, i {
 
 
 
-#grid-pic {
+.grid-pic {
 	height: 143px;
 	left: 8px;
 	position:absolute;
@@ -424,7 +424,7 @@ em, i {
 	float: left;
 }
 
-#grid-pic2 {
+.grid-pic2 {
 	height: 143px;
 	left: 8px;
 	position:absolute;
@@ -445,7 +445,7 @@ em, i {
 }
 
 
-#grid-content {
+.grid-content {
 	height: 190px;
 	left: 140px;
 	position:absolute;
@@ -456,13 +456,13 @@ em, i {
 	font-size: 10px;
 	color: black;
 }
-#grid-content p em a {
+.grid-content p em a {
 	color: black;
 	font-size: 10px;
 }
 
 
-#grid-content strong{
+.grid-content strong{
 	font-size: 13px;
 	color: black;
 }
@@ -911,7 +911,7 @@ p.small-one {
 	margin:0;
 }
 
-#port-pic {
+.port-pic {
 	height: 140px;
 	left: 10px;
 	position:absolute;
@@ -927,7 +927,7 @@ p.small-one {
 	margin:0;
 }
 
-#port-content {
+.port-content {
 	height: 45px;
 	left: 10px;
 	position:absolute;
@@ -943,7 +943,8 @@ p.small-one {
 	font-size: 13px;
 	color: black;
 }
-#port-content p{
+
+.port-content p{
 	font-size:13px; 
 	color: black;
 }

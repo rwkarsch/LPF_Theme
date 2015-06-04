@@ -101,7 +101,7 @@ if (x==null || x=="")
     
     <div id = "links">
     	<ul>
-			<?php wp_list_pages('sort_column=menu_order&include=13,15,21,23,34&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&include=13,21,23,34&title_li='); ?>
         	<li><img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/little-break-graphic.gif" alt="--" /></li>
         	<?php wp_list_pages('sort_column=menu_order&include=25,17,9,27,29,1981&title_li='); ?>
         	<!--<li><a title="blog" href="http://www.lapetitefleuronline.com/blog" target="_blank">blog</a></li>-->
@@ -114,7 +114,7 @@ Let's get your party started! <br /><br />Please complete the form below, and a 
         
 
   
-<form id="form1" name="form1" method="post" onsubmit="return validateForm();" action="<?php bloginfo('stylesheet_directory'); ?>/lpfmail.php">
+<form id="form1" name="form1" method="post" onsubmit="return validateForm();" action="<?php bloginfo('stylesheet_directory'); ?>/scripts/lpfmail.php">
 <table width="95%" border="0">
   <tr>
     <td class = "lpf_table" width="35%"><p>* Name:</p></td>
@@ -214,3 +214,4 @@ Let's get your party started! <br /><br />Please complete the form below, and a 
     </div> <!-- end class = content -->
 </div>
 <?php get_footer(); ?>
+

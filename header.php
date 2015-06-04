@@ -1,22 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
-
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta Name="description" Content="215 576-1814, La Petite Fleur specializes in creative and stylish events. We collaborate with you throughout the creative process to style your big day.">
-<meta name="keywords" content="La Petite Fleur, lapetiteevents, lapetiteweddings, Leigh Karsch, Karsch, Glenside, wedding, event planning,  events, invitation, floral design, Bar Mitzvah, Bat Mitzvah, designer, wedding coordinator, wedding planner, flowers, florist, boutquet, ceremony, ceremonies, centerpieces">
+<meta name="description" content="215 576-1814, La Petite Fleur specializes in creative and stylish events. We collaborate with you throughout the creative process to style your big day."/>
+<meta name="keywords" content="La Petite Fleur, lapetiteevents, lapetiteweddings, Leigh Karsch, Karsch, Glenside, wedding, event planning,  events, invitation, floral design, Bar Mitzvah, Bat Mitzvah, designer, wedding coordinator, wedding planner, flowers, florist, boutquet, ceremony, ceremonies, centerpieces"/>
 
-<meta http-equiv="Content-Language" content="en-us">
-<meta name="classification" content="Internet">
-<meta name="distribution" content="Global">
-<meta name="rating" content="General">
-<meta name="copyright" content="La Petite Fleur">
-<meta name="author" content="Internet">
-<meta name="revisit-after" content="2 days">
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta name="classification" content="Internet"/>
+<meta name="distribution" content="Global"/>
+<meta name="rating" content="General"/>
+<meta name="copyright" content="La Petite Fleur"/>
+<meta name="author" content="Internet"/>
+<meta name="revisit-after" content="2 days"/>
 
-<meta http-equiv="reply-to" content="La Petite Fleur">
-<meta name="robots" CONTENT="ALL">
-<meta name="robots" CONTENT="noarchive">
-<meta name="robots" CONTENT="index, follow">
+<meta http-equiv="reply-to" content="La Petite Fleur"/>
+<meta name="robots" content="ALL"/>
+<meta name="robots" content="noarchive"/>
+<meta name="robots" content="index, follow"/>
 
 
 <!--[if lte IE 8]>        

@@ -8,6 +8,7 @@ Template Name: Design
 
 ?>
 <?php get_header(); ?>
+<body>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -31,7 +32,7 @@ Template Name: Design
     </div>
     
     <div id = "links">
-    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,15,21,23,34&title_li='); ?>
+    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,21,23,34&title_li='); ?>
         <li><img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/little-break-graphic.gif" alt="--" /></li>
         <?php wp_list_pages('sort_column=menu_order&include=25,17,9,27,29,1981&title_li='); ?>
         <!--<li><a title="blog" href="http://www.lapetitefleuronline.com/blog" target="_blank">blog</a></li>-->
@@ -39,9 +40,20 @@ Template Name: Design
     </div>
     
     <div id = "photo-left">
-    	
-    	<img src="<?php bloginfo('stylesheet_directory'); ?>/images/<?php echo the_slug(); ?>/rotate.php" />
-        <?php echo print_r; ?>
+    	<?php $areaname = the_slug();
+		  switch ($areaname){ 
+		  	case "design": ?>    	
+        	<img src="<?php bloginfo('stylesheet_directory'); ?>/images/<?php echo $areaname; ?>/Design_Julie.jpg" alt="--"/>
+             <?php break; ?>
+          <?php case "flowers": ?>   
+             <img src="<?php bloginfo('stylesheet_directory'); ?>/images/<?php echo $areaname; ?>/FlowersMainGarden_1.jpg" alt="--"/>
+             <?php break; ?>
+           <?php case "plan": ?>   
+             <img src="<?php bloginfo('stylesheet_directory'); ?>/images/<?php echo $areaname; ?>/Plan_LeighFarnoosh.jpg" alt="--"/>
+             <?php break; }?>
+                
+            
+            
     </div>
     
     <div id = "content-right">
@@ -59,4 +71,5 @@ Template Name: Design
     </div> <!-- end class = content-right -->
      
 </div>
-<?php /* get_footer(); */ ?>
+</body>
+</html>

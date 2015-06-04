@@ -7,7 +7,11 @@ Template Name: As Seen In
 */
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 
 <!--[if lte IE 8]>        
@@ -44,7 +48,7 @@ Template Name: As Seen In
 <script type="text/javascript">
 			Cufon.replace('#container');
 </script>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 </head>
 <body>
@@ -59,7 +63,7 @@ Template Name: As Seen In
     
     <div id = "links">
     	<ul>
-			<?php wp_list_pages('sort_column=menu_order&include=13,15,21,23,34&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&include=13,21,23,34&title_li='); ?>
         	<li><img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/little-break-graphic.gif" alt="--" /></li>
         	<?php wp_list_pages('sort_column=menu_order&include=25,17,9,27,29,1981&title_li='); ?>
         	<!--<li><a title="blog" href="http://www.lapetitefleuronline.com/blog" target="_blank">blog</a></li>-->
@@ -118,7 +122,7 @@ Template Name: As Seen In
                         
                         
 						<?php if($pic_num > 13) :?>
-							</tr>
+							</tr><tr>
 							<?php $pic_num = 0; ?>
 						<?php endif; ?>   
 						
@@ -128,7 +132,7 @@ Template Name: As Seen In
 							<td>
 								<a href="<?php echo $pic_serv_pic_large;?>" title="<?php echo $pic_serv_photo_cred;?>" rel="enlargeimage" rev="targetdiv:loadarea-aso,link:<?php echo $pic_url; ?>">
 								
-                                	<img src="<?php echo $pic_serv_pic_thumb; ?>">                     
+                                	<img src="<?php echo $pic_serv_pic_thumb; ?>" alt="--" />                     
 								</a>
 							</td>
 						   
@@ -151,7 +155,7 @@ Template Name: As Seen In
     <!-- Originally this code was higher, but we want to load the picture upon coming in -->
      <div id = "loadarea-aso" class="photos">
     	   	<a href="<?php echo $first_url; ?>" target="_blank">
-            	<img src="<?php echo $first_pic; ?>">
+            	<img src="<?php echo $first_pic; ?>" alt="--" />
             </a>
            
    	</div>

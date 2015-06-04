@@ -7,10 +7,10 @@ Template Name: Grid
 */
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <!--[if lte IE 8]>        
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style-ie.css" />
@@ -52,6 +52,7 @@ Template Name: Grid
 <title>La Petite Fleur  | Philadelphia Wedding and Event Design, Planning, Decor, Flowers, Invitations | <?php echo the_slug(); ?></title>
 
 <?php wp_head() // Do not remove; helps plugins work ?>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
 
@@ -64,14 +65,16 @@ Template Name: Grid
     </div>
     
     <div id = "links">
-    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,15,21,23,34&title_li='); ?>
+    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,21,23,34&title_li='); ?>
         <li><img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/little-break-graphic.gif" alt="--" /></li>
         <?php wp_list_pages('sort_column=menu_order&include=25,17,9,27,29,1981&title_li='); ?>
         <!--<li><a title="blog" href="http://www.lapetitefleuronline.com/blog" target="_blank">blog</a></li>-->
         </ul>
     </div>
+    
     <div id = "content">
-    <?php 
+    
+	<?php 
 		   /*  Step 1: Establish the pod object  */
 		  $services = new Pod('services');  //<-- pods 1.0  
 		  //$services = pods('services');    
@@ -130,27 +133,28 @@ Template Name: Grid
 								case "about-leigh-karsch": 
 								case "style":              ?> 
                                 	
-                                    <div id = "grid-pic2">
-                                    	<img src=" <?php echo $serv_pic; ?>"> 
+                                    <div class = "grid-pic2">
+                                    	<img src=" <?php echo $serv_pic; ?>" alt="--"/> 
                                     
 									<?php break; ?>
                           <?php case "our_company": ?>    
-                                	<div id = "grid-pic">
+                                	<div class = "grid-pic">
                                     <a href="http://www.lapetitefleuronline.com/boutique">
-                        					<img src="<?php echo $serv_pic; ?>"> 
+                        					<img src="<?php echo $serv_pic; ?>" alt="--"/> 
 									</a>
                                 	 <?php break; ?>
                           <?php default: ?>      
-                        			<div id = "grid-pic">
+                        			<div class = "grid-pic">
                                     <a href="http://www.lapetitefleuronline.com/<?php echo $areaname."/".$serv_type; ?>">
-                        				<img src="<?php echo $serv_pic; ?>"> 
+                        				<img src="<?php echo $serv_pic; ?>" alt="--"/> 
 									</a>
                                     <?php break; 
                                 
 						}?>
                         </div>    
-                        <div id = "grid-content">
+                        <div class = "grid-content">
 							<?php echo $serv_short_text; ?>
+                            
                          </div>
 						</div> <!-- indicates grid-top-left, grid-top-right, etc. -->
     				<?php endwhile; ?>
@@ -158,7 +162,8 @@ Template Name: Grid
 </div><!-- content end -->
 </div><!-- container end -->
 
-<?php get_footer(); ?>            
+</body>
+</html>          
     	
     
     

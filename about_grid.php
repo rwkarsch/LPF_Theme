@@ -40,7 +40,7 @@ Template Name: About Grid
     </div>
     
     <div id = "links">
-    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,15,21,23,34&title_li='); ?>
+    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,21,23,34&title_li='); ?>
         <li><img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/little-break-graphic.gif" alt="--" /></li>
         <?php wp_list_pages('sort_column=menu_order&include=17,25,9,27,29,31&title_li='); ?>
         </ul>

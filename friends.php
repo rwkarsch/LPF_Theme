@@ -8,7 +8,7 @@ Template Name: Friends
 
 ?>
 <?php get_header(); ?>
-
+<body>
 <div id = "friends-container">
 	
     <div id = "container-header">
@@ -19,7 +19,7 @@ Template Name: Friends
     
     <div id = "links">
     	<ul>
-			<?php wp_list_pages('sort_column=menu_order&include=13,15,21,23,34&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&include=13,21,23,34&title_li='); ?>
         	<li><img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/little-break-graphic.gif" alt="--" /></li>
         	<?php wp_list_pages('sort_column=menu_order&include=25,17,9,27,29,1981&title_li='); ?>
         	<!--<li><a title="blog" href="http://www.lapetitefleuronline.com/blog" target="_blank">blog</a></li>-->
@@ -71,14 +71,14 @@ Template Name: Friends
                          		<div id = "grid-bottom-left">
                                 <?php break; 
 						}?>
-						<div id = "grid-pic">
+						<div class = "grid-pic">
                         	  
                         			<a href="<?php echo $serv_url; ?>" target="_blank">
-                        				<img src="<?php echo $serv_pic; ?>"> 
+                        				<img src="<?php echo $serv_pic; ?>" alt="--" /> 
 									</a>
                               
                         </div>    
-                        <div id = "grid-content">
+                        <div class = "grid-content">
 							<?php echo $serv_short_text; ?>
                          </div>
 						</div> <!-- indicates grid-top-left, grid-top-right, etc. -->
@@ -99,7 +99,7 @@ Template Name: Friends
                  </div>
                  <div id="friends-favorite">
                	   <p>
-                   <img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/flourishsm.jpg" width="8" height="12" /> La Petite Fleur Favorite
+                   <img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/flourishsm.jpg" width="8" height="12" alt="--"/> La Petite Fleur Favorite
                    </p> 
                  <div>  
 </div><!-- content end -->

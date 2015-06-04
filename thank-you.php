@@ -18,7 +18,7 @@ Template Name: Thank you
     </div>
     
     <div id = "links">
-    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,15,21,23,34&title_li='); ?>
+    	<ul><?php wp_list_pages('sort_column=menu_order&include=13,21,23,34&title_li='); ?>
         <li><img src="<?php bloginfo('stylesheet_directory'); ?>/graphics/little-break-graphic.gif" alt="--" /></li>
         <?php wp_list_pages('sort_column=menu_order&include=25,17,9,27,29,1981&title_li='); ?>
         <!--<li><a title="blog" href="http://www.lapetitefleuronline.com/blog" target="_blank">blog</a></li>-->
@@ -27,7 +27,7 @@ Template Name: Thank you
     
     <div id = "photo-left">
     	
-    	<img src="<?php bloginfo('stylesheet_directory'); ?>/images/design/rotate.php" />
+    	<img src="<?php bloginfo('stylesheet_directory'); ?>/images/design/Design_WixtedWall.jpg" />
     </div>
     
     <div id = "content-right">
